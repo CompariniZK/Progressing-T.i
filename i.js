@@ -2,7 +2,7 @@ let nomeCliente = 0
 let cpfCliente = 0
 let valor = 0
 let operacao = 0
-let saldo = 500
+let saldo = 0
 let ovoParar = 0
 let saldoTotal = 0
 let mediaGeral = 0
@@ -10,7 +10,7 @@ let maiorValorI = 0
 let numeroOperações = 0
 
 do{
-
+ 
  nomeCliente = prompt("Diga seu nome")
 
  cpfCliente = Number(prompt("Digite seu cpf"))
@@ -22,20 +22,22 @@ do{
 
  operacao = prompt("Saque ou depósito?")
 
+ saldo = 500
+                   
  let saque = saldo - valor
  let deposito = saldo + valor
 
  if(operacao === "Saque"){
 
-    let saldoTotal = saque
+     saldoTotal -= valor
     
  }
  else{
-   let saldoTotal = deposito 
-   
- }
-
- saldo += saldoTotal;
+    saldoTotal += valor
+ } 
+ 
+ saldo += saldoTotal 
+  
 
  if(valor > maiorValorI){
 
