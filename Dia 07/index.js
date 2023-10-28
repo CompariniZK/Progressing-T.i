@@ -35,7 +35,7 @@ while (true) {
     if (continuar != 'S') {
       break;
       //Break ele para 
-    } 
+    }
 } 
 
 const mediaGeral = somaNotas / totalAlunos;
