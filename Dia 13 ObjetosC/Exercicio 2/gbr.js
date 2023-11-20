@@ -11,8 +11,9 @@ aceleracao
     this.velocidadeM = velocidadeM
     this.aceleracao = aceleracao
     this.distanciaP = distanciaP
-
-function distancia()
+    
+ }
+   distancia()
     {
     let pouco = 0
     let vencedor12 = []
@@ -34,13 +35,13 @@ function distancia()
 
  }
 
-
-}
 let whilezin = true
 let contador = 0
 let carrao = []
 let vencedor10 = 0
 let vencedor0 = 0
+
+
 
 while(whilezin)
 {
@@ -49,12 +50,10 @@ let potencias = Number(prompt("Insira o número da potência do carro: "))
 let velocidadeMs = Number(prompt("Insira a velocidade máxima desse carro"))
 let aceleracaoZK = Number(prompt("Quantos segundos o carro leva para ir de 0 a 100?"))
 let distanciaPs = Number(prompt("Insira a distância a percorrer:"))
-let carrinho = new CARROS(nomes, potencias, velocidadeMs, aceleracaoZK , distanciaPs,)
-CARROS.distancia
-
+let carrinho = new CARROS(nomes, potencias, velocidadeMs, aceleracaoZK , distanciaPs)
 
 carrao[contador] = carrinho
-
+carrao.distancia()
 contador++
 
 let stopz = Number(prompt("pretende adicionar mais carros? (digite 2) pra não"))
@@ -87,7 +86,7 @@ this.vencedor = vencedor
 }
 theWinnerIs()
 {
-console.log("Os vencedores em ordem foram: " + sorted)
+console.log("Os vencedores em ordem foram: " + carrao[0].distancia())
 return;
 }
 }
@@ -100,8 +99,11 @@ let vencedores = CARROS.distancia
 
 let corridinhas = new CORRIDA(nomes3, tipos2, distancia, participantes, vencedores)
 let corridaCD = [corridinhas]
+
 console.log(carrao)
 console.log(corridaCD)
+console.log(corridaCD[0].theWinnerIs())
+
 
 
 
