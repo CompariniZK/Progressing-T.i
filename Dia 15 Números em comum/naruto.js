@@ -18,6 +18,7 @@ for(let contador = 0; contador <= jutsu.length; contador++ ){
          
             pain[contador3] === jutsu[contador]
             contador3++
+            contador2 === teDeioCha.length
 
 
 
