@@ -34,11 +34,31 @@ nomeCliente[contador] = nome
 senhaCliente[contador] = senha
 
 contador++
+let sera = Number(prompt("Deseja fazer login? (1) para sim"))
+if(sera === 1){
 
+    login();
+    let acabou = Number(prompt("Deseja adicionar mais algum cadastro? (1) para SIM; (2) para NÃO"))
+
+    if(acabou === 1){
+ 
+        cadastro();
+                    }
+          else{
+
+            demanda();
+
+
+          }          
 }
+
+
+
+
 
 function login(nome2, senha2){
 let loginzao = true
+
 
 while(loginzao = true){
  nome2 = prompt("Insira seu nome de login")
@@ -47,7 +67,7 @@ while(loginzao = true){
  nomeCliente.includes(nome2)
  senhaCliente.includes(senha2)
 
- if(nomeCliente.includes(nome2) === true && senhaCliente.includes(senha2) === false)
+ if(nomeCliente.includes(nome2) === true && senhaCliente.includes(senha2) === true)
  {
 
 console.log("login Successful")
@@ -76,10 +96,10 @@ senhaCliente.splice(senhaCliente.includes(senha3))
 
 
 }
+}
+ let acabou2 = Number(prompt("Deseja adicionar mais? (1) para SIM; (2) para NÃO"))
 
-let acabou = Number(prompt("Deseja adicionar mais? (1) para SIM; (2) para NÃO"))
-
-if(acabou === 1){
+if(acabou2 === 1){
 
 demanda();
 
