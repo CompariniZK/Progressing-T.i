@@ -1,10 +1,10 @@
 let contador = 0
 let nomeCliente = []
 let senhaCliente = []
+
 demanda();
 
-function demanda(){
-let coisa = true   
+function demanda(){   
 while(coisa = true){
 let pedido = parseInt(prompt("Escolha uma das opções: (1)Cadastro; (2) login; (3) exclusão de uma conta (4) Encerrar "))
 
@@ -14,14 +14,17 @@ if(pedido === 1)
 }
 if(pedido === 2){
 
-    login(nome2, senha2);
+    login(nomeCliente, senhaCliente);
 }
 if(pedido === 3)
 {
-    exclusao(nome3);
+    exclusao(nomeCliente, senhaCliente);
 }
 
-
+if(pedido === 4){
+    
+    break;
+}
 
 }
 
@@ -86,22 +89,23 @@ break
 }
 }
 
-function exclusao(nome3){
+function exclusao(nomeCliente, senhaCliente){
 
-nome3 = prompt("Insira o nome da conta que deseja excluir")
+let nome3 = prompt("Insira o nome da conta que deseja excluir")
 let senha3 = parseInt(prompt("Insira a senha da conta que deseja exlcuir"))
 
 nomeCliente.includes(nome3)
 senhaCliente.includes(senha3)
 
-if(nomeCliente.includes(nome3) === true && senhaCliente === true){
+if(nomeCliente.includes(nome3) == true && senhaCliente.includes(senha3) == true){
 
-nomeCliente.splice(nomeCliente.includes(nome3))
-senhaCliente.splice(senhaCliente.includes(senha3))
-
+    nomeCliente.splice(nomeCliente.includes(nome3))
+    senhaCliente.splice(senhaCliente.includes(senha3))
+    
+    console.log(nomeCliente)
+    console.log(senhaCliente)
 
 }
-
 
 }
 }
