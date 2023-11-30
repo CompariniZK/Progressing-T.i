@@ -1,6 +1,7 @@
 let contador = 0
 let nomeCliente = []
 let senhaCliente = []
+let coisa = true
 
 demanda();
 
@@ -23,6 +24,7 @@ if(pedido === 3)
 
 if(pedido === 4){
     
+    coisa = false
     break;
 }
 
