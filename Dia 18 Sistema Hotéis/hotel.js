@@ -50,16 +50,16 @@ function cadastroHotel (ID, nome, categoria, endereco, telefone){
 class Reservas{
 
 id;
-NameHotel;
+nameHotel;
 nomeResponsavel;
 diaEntrada;
 diaSaida;
 
-constructor(id,idHotel,nomeResponsavel,diaEntrada,diaSaida)
+constructor(id,nameHotel,nomeResponsavel,diaEntrada,diaSaida)
 {
 
     this.id = id
-    this.idHotel = idHotel
+    this.nameHotel = nameHotel
     this.nomeResponsavel = nomeResponsavel
     this.diaEntrada = diaEntrada
     this.diaSaida = diaSaida
@@ -79,8 +79,8 @@ reservas.push(reservado);
 }
 let loopzin = true
 
-let id = 0
-let idHotel = 0
+let idDaReserva = 0
+let nameHotel = 0
 let nomeResponsavel = 0
 let diaEntrada = 0
 let diaSaida = 0
@@ -104,23 +104,23 @@ break;
 
 }
 }
-
-
-function demanda(IDHOTEL){
-
-
-    IDHOTEL = Number(prompt("Insira o nome do hotel reservado"))
-    if(IDHOTEL === nameHotel){
-
+    function demanda(IDHOTEL) {
+        IDHOTEL = Number(prompt("Insira o ID do hotel para verificar as reservas:"));
     
-
-       console.log(reservas.indexOf(IDHOTEL))
-
+        // Verificar se há pelo menos uma reserva para o hotel
+        let reservasHotel = reservas.filter(reserva => reserva.nameHotel === IDHOTEL);
+        // Em cada posição do array 'reservas' será filtrado nameHotel === IDHOTEL
+        //Se for true, vem o código abaixo:
     
+        if (reservasHotel.length > 0) 
+        //Se tiver em alguma posição do array o valor inserido, a váriavel reservasHotel será maior que 0
+        //Portanto, se for maior que 0,  será mostrado no console o array correspondente à filtragem;
+        {
+            console.log("Reservas encontradas para o hotel ID " + IDHOTEL + ":");
+            console.log(reservasHotel);
+        } else {
+            console.log("Nenhuma reserva encontrada para o hotel ID " + IDHOTEL);
+        }
     }
-
-
-
-}
-
-demanda();
+    
+    demanda();
