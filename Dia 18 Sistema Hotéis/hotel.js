@@ -122,5 +122,14 @@ break;
             console.log("Nenhuma reserva encontrada para o hotel ID " + IDHOTEL);
         }
     }
-    
+    function demandaNome(nomeReservante){
+        nomeReservante = prompt("Insira o nome do Reservante para verificarmos a reserva: ")
+        let reservante = reservas.filter(reserva => reserva.nomeResponsavel === nomeReservante);
+
+        if(reservante.length > 0){
+            console.log("Reservas encontradas no nome do " + nomeReservante + ":")
+            console.log(reservante);
+        }
+    }
+
     demanda();
