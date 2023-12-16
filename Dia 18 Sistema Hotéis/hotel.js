@@ -132,4 +132,53 @@ break;
         }
     }
 
-    demanda();
+    function demandaCategoria (categoris){
+
+        categoris = Number(prompt("Qual a categoria do Hotel reservado? Vamos buscá-lo"))
+        let Ncategoria = hoteis.filter(nota => nota.categoria === categoris)
+        
+        if (Ncategoria.length > 0) {
+
+        console.log("Os Hoteis e suas informações com essa categoria são:");
+        
+        Ncategoria.forEach(hotel => {
+            console.log("ID: " + hotel.ID);
+            console.log("Nome: " + hotel.nome);
+            console.log("Categoria: " + hotel.categoria);
+            console.log("Endereço: " + hotel.endereço);
+            console.log("Telefone: " + hotel.telefone);
+            console.log("------");
+        });
+    } 
+    else
+     {
+        console.log("Nenhum hotel encontrado com a categoria " + categoris);
+    }
+}
+
+
+    let fazer = parseInt(prompt("Digite 1 se deseja fazer uma busca de hotéis por categotoria, ou digite 2 para buscar sua reserva"))
+      
+       if(fazer === 1){
+
+        demandaCategoria();
+
+    }
+       if(fazer === 2){
+
+    
+       let operacao = parseInt(prompt("Como você pretende fazer sua busca de reservas? Nome do responsável (1)? Nome do hotel digite (2)"))
+             if(operacao === 1){
+
+              demandaNome ();
+}
+
+                if(operacao === 2){
+
+                  demanda();
+
+
+
+}
+
+    }
