@@ -1,21 +1,11 @@
-let positivoInteiro = parseInt(prompt("Digite um número inteiro e positivo:"))
-
-
-for(let contador = 0; contador <= positivoInteiro; contador++){
 
 
 
+for(let contador = 10; contador >=0; contador--){
 
+let multiplica = contador * 5;
 
-    if(contador > 1){
-
-        console.log("Você conhece " + contador + " cornos." )
-    }
-    else{
-
-        console.log("Você conhece " + contador + " corno." )
-    }
-
+console.log(multiplica);
 
 
 }
