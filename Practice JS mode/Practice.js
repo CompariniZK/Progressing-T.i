@@ -47,3 +47,15 @@ if(imc >= 30 ){
 
 }
 
+let anoDeNascimento = 2024 - idade;
+
+console.log("Descobri que o ano de seu nascimento foi em: " + anoDeNascimento + ", correto?")
+
+let contador = 0;
+
+for(anoDeNascimento; anoDeNascimento <= 2024; anoDeNascimento++){
+
+
+console.log(anoDeNascimento + " = " + contador + " anos.")
+contador++
+}
