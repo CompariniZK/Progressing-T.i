@@ -1,27 +1,19 @@
-let numeroEntrada = Number(prompt("Digite um número até 10"))
-console.log("TABUADA DO " + numeroEntrada + " ABAIXO:")
-for(let contador = 0; contador <= 10; contador++ ){
+let nome = prompt("Insira seu nome: ");
+let idade = parseInt(prompt("Insira sua idade: "))
+let profissão = prompt("Insira sua profissão: ")
+let idadeEmDias =  idade * 365;
+let idadeEmMeses = idade * 12;
+let idadeEmSemanas = idade * 52
 
-    let resultado = contador * numeroEntrada;
-    console.log(numeroEntrada + " x " + contador + " = " + resultado);
+if(idade >= 18){
 
-}
+    console.log("Olá " + nome + ", " + "sua profissão é " + profissão + " e você tem " + idade + " anos e já pode tomar umas geladas haha!" );
 
-let numeroEntrada2 = numeroEntrada + 1
-console.log("TABUADA DO " + numeroEntrada2 + " ABAIXO:")
+}else{
 
-for(let contador2 = 0; contador2 <= 10; contador2++){
 
-    let resultado2 = contador2 * numeroEntrada2;
-    console.log(numeroEntrada2 + " x " + contador2 + " = " + resultado2);
-}
-
-let numeroEntrada3 = numeroEntrada2 + 1
-console.log("TABUADA DO " + numeroEntrada3 + " ABAIXO:")
-
-for(let contador3 = 0; contador3 <= 10; contador3++){
-
-let resultado3 = contador3 * numeroEntrada3;
-console.log(numeroEntrada3 + " x " + contador3 + " = " + resultado3)
+    console.log("Olá " + nome + ", " + "sua profissão é " + profissão + " e você tem " + idade + " anos, de menor hein!");
 
 }
+
+console.log("Você nasceu há " + idade + " anos" + ", " + idadeEmMeses + " meses, " + idadeEmSemanas + " semanas e " + idadeEmDias + " dias.")
