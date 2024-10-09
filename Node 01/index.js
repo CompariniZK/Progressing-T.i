@@ -1,5 +1,4 @@
-let distancia = parseInt(prompt("Qual a distância do percurso (KM)? "));
-let combustivel = prompt("Qual o combustível da máquina? Digite: (G) para Gasolina e (E) para etanol");
+
 
 function calculoRota (distancia, combustivel){
 
@@ -16,4 +15,4 @@ if(combustivel == "G"){
         return resultado;
 }
 
-console.log("A quantidade de litros de combustíveis é de: " + calculoRota(distancia, combustivel) + " litros");
+module.exports = calculoRota;
