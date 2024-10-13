@@ -7,6 +7,7 @@ let homensNaSala = [];
 let contadorF = 0
 let mulheresNaSala = [];
 let whilez = false;
+let maiorNotaHomens = 0;
 
 let question1 = Number(prompt("Você deseja cadastrar uma nota? 1 para sim e 2 para não."))
     if(question1=== 1 ){
@@ -24,9 +25,11 @@ let notasM = 0;
         sexo = prompt("Qual o sexo do aluno? M para masculino e F para feminino")
             if(sexo == "M"){
 
-                contadorM++
+                
                 homensNaSala[contadorM] = nota;
                 notasM += nota;
+                maiorNotaHomens = Math.max(...homensNaSala)
+                contadorM++
             }
 
             else{
@@ -46,7 +49,8 @@ let notasM = 0;
 
             console.log("A média geral foi de " + mediaGeral + ";")
             console.log("A quantidade de homens no boletim foi de: " + contadorM + " homens;")
-            console.log("A quantidade de mulheres acima de 7 foram de : " + mulheresNaSala)
+            console.log("A quantidade de mulheres acima de 7 foram de : " + mulheresNaSala.length)
+            console.log("A maior nota dos homens foi: " + maiorNotaHomens)
             
             whilez = false;
 }
