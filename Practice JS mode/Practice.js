@@ -1,58 +1,59 @@
-let nota = 0 
-let nome = 0
-let sexo = 0
-let continueS = 0
-let contadorM = 0
-let homensNaSala = [];
-let contadorF = 0
-let mulheresNaSala = [];
-let whilez = false;
-let maiorNotaHomens = 0;
+let saldoTotal = 1000
+let valoresInseridos = []
+let contador = 0;
+let desejo = 2;
+let maiorValor = 0
+let contador2 = 0
 
-let question1 = Number(prompt("Você deseja cadastrar uma nota? 1 para sim e 2 para não."))
-    if(question1=== 1 ){
+do{
+let nomeCliente = prompt("Digite seu nome:")
+let cpfCliente =  Number(prompt("Digite seu CPF: "))
+let valorCliente = Number(prompt("Digite um valor:"))
+contador2 += valorCliente
+let opcao = parseInt(prompt("Digite 1 para saque e 2 para depósito"))
 
-        whilez = true;
+
+if(opcao === 1 && valorCliente > 0 && valorCliente <= saldoTotal){
+
+    
+   saldoTotal =  saldoTotal  -  valorCliente;
+
+    console.log("Você sacou: " + valorCliente + "euros de tua conta")
+
+    console.log("Seu saldo total é de: " + saldoTotal + " euros")
+    valoresInseridos[contador] = valorCliente
+    contador++
+
+    maiorValor = Math.max(...valoresInseridos)
+
+}
+else{
+
+    console.log("saldo insuficiente")
+}
+
+else if (opcao === 2) {
+    // Condição para depósito: valor positivo
+    if (valorCliente > 0) {
+        saldoTotal += valorCliente;
+        console.log("Parabéns, você depositou " + valorCliente + " euros em sua conta");
+        console.log("Seu saldo total é de: " + saldoTotal + " euros");
+        valoresInseridos.push(valorCliente);  // Adiciona o valor ao array
+        maiorValor = Math.max(...valoresInseridos);
+        contador++;
+    } else {
+        console.log("Valor inválido. Operação cancelada.");
     }
-        
-let notasF = 0;
-let notasM = 0;
+let mediaValores = contador2 / contador;
+ 
+desejo = parseInt(prompt("Você deseja terminar com as operações ou deseja realizar uma nova? Digite 1 para terminar e 2 para realizar mais operações"))
 
-    while(whilez === true){
+if(desejo === 1){
 
-        nome = prompt("Digite o nome do aluno")
-        nota = Number(prompt("Entre com a nota do aluno:"))
-        sexo = prompt("Qual o sexo do aluno? M para masculino e F para feminino")
-            if(sexo == "M"){
-
-                
-                homensNaSala[contadorM] = nota;
-                notasM += nota;
-                maiorNotaHomens = Math.max(...homensNaSala)
-                contadorM++
-            }
-
-            else{
-
-                contadorF++
-                if(nota > 7)
-                mulheresNaSala[contadorF] = nota;
-                notasF += nota;
-            }
-        continueS = parseInt(prompt("Deseja inserir a  nota de um novo aluno? 1 para sim e 2 para nao"))
-
-         if(continueS == 2){
-
-            let quantidadeGeral = contadorM + contadorF
-            let somaNotas = notasM + notasF
-            let mediaGeral = somaNotas / quantidadeGeral;
-
-            console.log("A média geral foi de " + mediaGeral + ";")
-            console.log("A quantidade de homens no boletim foi de: " + contadorM + " homens;")
-            console.log("A quantidade de mulheres acima de 7 foram de : " + mulheresNaSala.length)
-            console.log("A maior nota dos homens foi: " + maiorNotaHomens)
-            
-            whilez = false;
+    console.log("O maior valor inserido para saques ou depósitos foi: " + maiorValor)
+    console.log("A média dos valores é igual à: " + mediaValores)
 }
-
 }
+}
+while(desejo === 2)
+
