@@ -1,59 +1,36 @@
-let saldoTotal = 1000
-let valoresInseridos = []
-let contador = 0;
-let desejo = 2;
-let maiorValor = 0
-let contador2 = 0
+function Calculadora (num1, num2, operador){
 
-do{
-let nomeCliente = prompt("Digite seu nome:")
-let cpfCliente =  Number(prompt("Digite seu CPF: "))
-let valorCliente = Number(prompt("Digite um valor:"))
-contador2 += valorCliente
-let opcao = parseInt(prompt("Digite 1 para saque e 2 para depósito"))
+    num1 = Number(prompt("digite um primeiro número"))
+    num2 = Number(prompt("Digite um segundo número"))
+    operador= prompt("Qual operação gostaria de fazer?")
+
+        if(operador === "soma" || "Soma"){
+
+           console.log("O resultado da soma é: ")
+           console.log( num1 + num2)
+        }
+
+        if(operador === "Subtração" || "subtração"){
+
+            console.log("O resultado da subtração é: ")
+            console.log(num1 - num2)
+        }
+
+        if(operador === "Divisão" || "divisao"){
+
+            console.log("O resultado dessa divisão é: ")
+            console.log(num1 / num2)
+        }
 
 
-if(opcao === 1 && valorCliente > 0 && valorCliente <= saldoTotal){
+        if(operador === "Multiplicação" || "multiplicação"){
+
+            console.log("O resultado dessa multiplicação é: ")
+            console.log(num1 * num2)
+        }
 
     
-   saldoTotal =  saldoTotal  -  valorCliente;
-
-    console.log("Você sacou: " + valorCliente + "euros de tua conta")
-
-    console.log("Seu saldo total é de: " + saldoTotal + " euros")
-    valoresInseridos[contador] = valorCliente
-    contador++
-
-    maiorValor = Math.max(...valoresInseridos)
-
-}
-else{
-
-    console.log("saldo insuficiente")
 }
 
-else if (opcao === 2) {
-    // Condição para depósito: valor positivo
-    if (valorCliente > 0) {
-        saldoTotal += valorCliente;
-        console.log("Parabéns, você depositou " + valorCliente + " euros em sua conta");
-        console.log("Seu saldo total é de: " + saldoTotal + " euros");
-        valoresInseridos.push(valorCliente);  // Adiciona o valor ao array
-        maiorValor = Math.max(...valoresInseridos);
-        contador++;
-    } else {
-        console.log("Valor inválido. Operação cancelada.");
-    }
-let mediaValores = contador2 / contador;
- 
-desejo = parseInt(prompt("Você deseja terminar com as operações ou deseja realizar uma nova? Digite 1 para terminar e 2 para realizar mais operações"))
-
-if(desejo === 1){
-
-    console.log("O maior valor inserido para saques ou depósitos foi: " + maiorValor)
-    console.log("A média dos valores é igual à: " + mediaValores)
-}
-}
-}
-while(desejo === 2)
+let pergunta = prompt()
 
