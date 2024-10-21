@@ -1,36 +1,21 @@
-function Calculadora (num1, num2, operador){
+let arry = [];
+let whilzz = true;
+let contador = 0;
+let pergunta = Number(prompt("Quantos números deseja preencher o array?"));
+let pergunta2 = 0;
 
-    num1 = Number(prompt("digite um primeiro número"))
-    num2 = Number(prompt("Digite um segundo número"))
-    operador= prompt("Qual operação gostaria de fazer?")
+while(whilzz === true){
 
-        if(operador === "soma" || "Soma"){
+   
+    pergunta2 = Number(prompt("Qual o número ?"))
 
-           console.log("O resultado da soma é: ")
-           console.log( num1 + num2)
-        }
+    arry[contador] = pergunta2
+    contador++
 
-        if(operador === "Subtração" || "subtração"){
+    if(contador === pergunta){
 
-            console.log("O resultado da subtração é: ")
-            console.log(num1 - num2)
-        }
+        console.log(arry)
+        break;
+    }
 
-        if(operador === "Divisão" || "divisao"){
-
-            console.log("O resultado dessa divisão é: ")
-            console.log(num1 / num2)
-        }
-
-
-        if(operador === "Multiplicação" || "multiplicação"){
-
-            console.log("O resultado dessa multiplicação é: ")
-            console.log(num1 * num2)
-        }
-
-    
 }
-
-let pergunta = prompt()
-
