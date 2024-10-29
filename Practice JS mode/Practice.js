@@ -20,11 +20,36 @@ class Carros{
     
         vitesse (distancia){
 
-             distancia = prompt(" distancia a percorrer:")
-            resultado = distancia/(velocidadeM / Aceleracao)
+   
+            resultado = distancia/(this.velocidadeM / this.Aceleracao)
+           
+
+           
 
         } 
     
+
+}
+
+
+function CalculoMenorTempo(arrayCarro, distancia){
+
+    let carroMenorTempo = arrayCarro[0];
+    let calculoMenorTempo = carroMenorTempo.vitesse(distancia);
+
+    for(let i = 1; i < arrayCarro.length; i++ ){
+
+        let TempoAtual = arrayCarro[i].vitesse(distancia)
+        if(TempoAtual < calculoMenorTempo){
+
+            calculoMenorTempo = TempoAtual
+            carroMenorTempo = arrayCarro[i];
+        }
+
+
+    }
+        return carroMenorTempo;
+
 
 }
 
@@ -39,8 +64,8 @@ let whilezin = true;
 
         let nome = prompt("Insira o nome do carro:")
         let potencia = prompt("Insira a potencia:")
-        let vm = prompt("Insira a velocidade máxima:")
-        let aceleracao = prompt("Insira a aceleracao")
+        let vm = Number(prompt("Insira a velocidade máxima: em kms"))
+        let aceleracao = Number(prompt("Insira a aceleracao por segundo em Kms"))
 
         carro = new Carros(nome, potencia, vm , aceleracao)
         
@@ -86,10 +111,13 @@ while(whilezin2 === true)
 
 {
     let nomeCorrida = prompt("Qual o  nome da corrida?")
+
     let tipoCorrida = prompt("Qual o tipo da corrida? ")
-    let distancia = prompt("Qual a distancia?")
-    let participantes = prompt("Quantos participantes estiveram?")
-    let vencedor = prompt("Qual foi o vencedor?")
+    let distancia = Number(prompt("Qual a distancia em KMs?"))
+        let participantes = arrayCarro.length
+            console.log("Participaram " + participantes + " carros")
+                let vencedor = CalculoMenorTempo(arrayCarro, distancia)
+                    console.log("O vencedor foi o carro com " + vencedor )
 
     corrida = new Corrida(nomeCorrida, tipoCorrida, distancia, participantes, vencedor)
     arrayCorrida[contador2] = corrida
