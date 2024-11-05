@@ -1,45 +1,56 @@
 
 body{
-    display: flex;
-    flex-direction: column;
-    margin:0;
-    padding: 0;
+
+    padding: 0px;
+    margin: 0px 0px;
 
 }
-.title{
 
-    margin: 4vh auto;
+h2{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    line-height: 18vh;
+}
+.cabeçalho{
+
+height: 28vh;
+width: 100%;
+background-color: beige;
+
+
+
+
+}
+
+.cabecalho1{
+
+    height: 19vh;
+    width: 100%;
     text-align: center;
-
-}
-.Conteudo{
-
-    height: 86vh;
-    width:100vw;
-    background-color: azure; 
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    border-top: solid gray;
-    border-width: 0.6px;
-}
-
-
-.Lista{
-
-    align-items: center;
-    background-color: bisque;
-    width: 500px;
-    margin: 5vh auto;
-    flex-direction: column;
-    display:flex;
-    border: solid black;
-    border-radius: 10px;
+    border-bottom: solid gray;
+    border-width: 0.5px;
     
 }
 
-ul{
 
-    padding:0;
+.cabecalho2{
+
+    height: 10vh;
+    width:100%;
+    text-align: center;
+}
+
+#inscreva{
+
+    margin-right: 3vw;
+}
+
+#saiba{
+
+    margin-left: 3vw;
+}
+h3{
+
+    display: inline-flex;
     
 }
