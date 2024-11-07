@@ -54,3 +54,116 @@ h3{
     display: inline-flex;
     
 }
+
+
+.Conteudo{
+
+    height: 72vh;
+    width: 100%;
+    
+
+
+}
+
+.Persona1{
+
+    height: 30vh ;
+    width: 14vw; 
+    margin-left: 8vw;
+    padding-left: 4vw;
+
+    margin-right: 9vw;
+    margin-top: 4vh;
+    display: inline-flex;
+}
+
+.Persona1:hover{
+
+  transform: scale(1.1);
+  transition-duration: 0.9s;
+}
+p{
+
+    height: auto ;
+    width: 20vw; 
+    border: solid black;
+    border-width: 0.6px;
+    white-space: normal;
+    display:inline-flex;
+    margin-left: 2vw;
+    padding: 1vh 1vw;
+    
+}
+.Persona2{
+    
+    height: 30vh ;
+    width: 14vw; 
+    margin-left: 1vw;
+    margin-top: 4vh;
+    margin-right: 4vw;
+    padding-right: 8vw;
+
+    display: inline-flex;
+    float:right
+}
+
+.Persona2:hover{
+
+   
+  transform: scale(1.1);
+  transition-duration: 0.9s;
+}
+
+.Persona3{
+
+    height: 30vh ;
+    width: 14vw; 
+    margin-left: 12vw;
+    margin-top: 4vh;
+    display: inline-flex;
+    
+    
+}
+
+.Persona3:hover{
+
+   
+  transform: scale(1.1);
+  transition-duration: 0.9s;
+
+}
+
+
+.Persona4{
+    
+    height: 30vh ;
+    width: 14vw; 
+    margin-left: 1vw;
+    margin-top: 4vh;
+    margin-right: 4vw;
+    padding-right: 8vw;
+
+    display: inline-flex;
+    float:right
+}
+
+.Persona4:hover{
+
+   
+  transform: scale(1.1);
+  transition-duration: 0.9s;
+
+}
+
+img:hover{
+
+    width: 1000px;
+    transition-duration: 0.6s;
+
+
+} 
+
+#Arnold{
+
+    width: 600px;
+}
