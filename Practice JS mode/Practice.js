@@ -1,7 +1,22 @@
 function Desejo(){
 
     let desejo = Number(prompt("O que você deseja fazer? (1) Cadastro, (2) Login, (3) excluir conta ou (4)encerrar programa (Digite o número respectivo)"))
-    
+        if(desejo === 1){
+
+            DadosUsuario();
+        }
+        if(desejo === 2 ){
+
+            Login();
+        }
+        if(desejo === 3){
+
+            Exclusao();
+        }
+        else{
+
+            console.log("Tenha uma ótima tarde")
+        }
     return desejo
 }
 
@@ -18,6 +33,8 @@ function DadosUsuario (){
     let senha = prompt("Digite sua senha")
 
     arraySenhas.push(senha)
+
+    Desejo();
 
 }
 
@@ -51,31 +68,32 @@ function Login(nomeLogin,senhaLogin){
             console.log("Nenhum nome com o " + nomeLogin + " encontrado")
         }
 
+        Desejo();
 
 }
 
     function Exclusao(nome, senha){
 
-        nomeExlusao = prompt("Digite o nome da conta, para exclusão: ")
-            let verifica2 = arrayNomes.filter(function(nome){
+        nome = prompt("Digite o nome da conta, para exclusão: ")
+        let verifica2 = arrayNomes.indexOf(nome)
 
+            if(verifica2 !== -1){
 
-                return nome === nomeExclusao
-            })
+                senha = prompt("Digite a senha da conta a excluir:")
+                
+                
+                if(arraySenhas[verifica2] === senha){
 
-                if(verifica2.length > 0){
+                    arrayNomes.splice(verifica2, 1)
+                    arraySenhas.splice(verifica2, 1)
 
-                    senhaExclusao = prompt("Digite a senha correspondente: ")
-                    let verifica3 = arraySenhas.filter(function(senha){
+                    console.log(arrayNomes)
+                    console.log(arraySenhas)
+                }
+            }
 
-                        senha === senhaExclusao
-                        return senhaExclusao
-                    })
-                        if(verifica3.length > 0){
-
-                        
-                            })
-                        }
+            Desejo();
                 }
 
-    }
+                
+Desejo();
