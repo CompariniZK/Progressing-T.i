@@ -1,169 +1,89 @@
 
 body{
 
-    padding: 0px;
-    margin: 0px 0px;
+    padding: 0 0;
+    margin: 0 0 ;
+}
+.Cabeçalho{
 
+    height: 20vh;
+    width: 100%;
+    background-color:darkgoldenrod ;
+    text-align: center;
+
+}
+
+.Título{
+
+    padding-top: 7vh;
+    height: auto;
+    width: auto;
+    text-align: center;
+}
+
+h1{
+
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 
 h2{
-    margin-block-end: 0;
-    margin-block-start: 0;
-    line-height: 18vh;
+    margin-block-start: 2vh;
+    margin-block-end: 2vh;
 }
-.cabeçalho{
-
-height: 28vh;
-width: 100%;
-background-color: beige;
-
-
-
-
-}
-
-.cabecalho1{
-
-    height: 19vh;
-    width: 100%;
-    text-align: center;
-    border-bottom: solid gray;
-    border-width: 0.5px;
-    
-}
-
-
-.cabecalho2{
-
-    height: 10vh;
-    width:100%;
-    text-align: center;
-}
-
-#inscreva{
-
-    margin-right: 3vw;
-}
-
-#saiba{
-
-    margin-left: 3vw;
-}
-h3{
-
-    display: inline-flex;
-    
-}
-
 
 .Conteudo{
 
-    height: 72vh;
     width: 100%;
+    height: 80vh;
+    text-align: center;
     
+}
 
+.Primeira{
+
+    margin-top:5vh
 
 }
 
-.Persona1{
+.segunda{
 
-    height: 30vh ;
-    width: 14vw; 
-    margin-left: 8vw;
-    padding-left: 4vw;
-
-    margin-right: 9vw;
-    margin-top: 4vh;
-    display: inline-flex;
+    margin-top: 1.5vh;
 }
 
-.Persona1:hover{
+.terceira{
 
-  transform: scale(1.1);
-  transition-duration: 0.9s;
+    margin-top: 1.5vh;
 }
-p{
 
-    height: auto ;
-    width: 20vw; 
+.quarta{
+
+    margin-top: 1.5vh;
+}
+
+.quinta{
+
+    margin-top: 1.5vh;
+}
+
+.sexta{
+
+    margin-top: 1vh;
+}
+
+.forms{
+text-align: center;
+}
+.Formulario{
+
+    margin-top: 10vh;
+    margin-left: 24vw;
+    height: 55vh;
+    width:50%;
     border: solid black;
-    border-width: 0.6px;
-    white-space: normal;
-    display:inline-flex;
-    margin-left: 2vw;
-    padding: 1vh 1vw;
-    
-}
-.Persona2{
-    
-    height: 30vh ;
-    width: 14vw; 
-    margin-left: 1vw;
-    margin-top: 4vh;
-    margin-right: 4vw;
-    padding-right: 8vw;
-
-    display: inline-flex;
-    float:right
 }
 
-.Persona2:hover{
+#enviar{
 
-   
-  transform: scale(1.1);
-  transition-duration: 0.9s;
-}
-
-.Persona3{
-
-    height: 30vh ;
-    width: 14vw; 
-    margin-left: 12vw;
-    margin-top: 4vh;
-    display: inline-flex;
-    
-    
-}
-
-.Persona3:hover{
-
-   
-  transform: scale(1.1);
-  transition-duration: 0.9s;
-
-}
-
-
-.Persona4{
-    
-    height: 30vh ;
-    width: 14vw; 
-    margin-left: 1vw;
-    margin-top: 4vh;
-    margin-right: 4vw;
-    padding-right: 8vw;
-
-    display: inline-flex;
-    float:right
-}
-
-.Persona4:hover{
-
-   
-  transform: scale(1.1);
-  transition-duration: 0.9s;
-
-}
-
-img:hover{
-
-    width: 1000px;
-    transition-duration: 0.6s;
-
-
-} 
-
-#Arnold{
-
-    width: 600px;
+    margin-top: 1.5vh;
 }

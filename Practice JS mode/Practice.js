@@ -96,4 +96,3 @@ function Login(nomeLogin,senhaLogin){
                 }
 
                 
-Desejo();
