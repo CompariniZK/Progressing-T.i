@@ -1,98 +1,91 @@
-function Desejo(){
+class Alunos{
 
-    let desejo = Number(prompt("O que você deseja fazer? (1) Cadastro, (2) Login, (3) excluir conta ou (4)encerrar programa (Digite o número respectivo)"))
-        if(desejo === 1){
+    nome 
+    idade
+    nota
 
-            DadosUsuario();
-        }
-        if(desejo === 2 ){
+    constructor(nome, idade, nota){
 
-            Login();
-        }
-        if(desejo === 3){
-
-            Exclusao();
-        }
-        else{
-
-            console.log("Tenha uma ótima tarde")
-        }
-    return desejo
-}
-
-let arrayNomes = [];
-let arraySenhas = [];
-
-function DadosUsuario (){
-
-    let nome = prompt("Digite seu nome")
-
-    arrayNomes.push(nome);
-
-
-    let senha = prompt("Digite sua senha")
-
-    arraySenhas.push(senha)
-
-    Desejo();
-
-}
-
-function Login(nomeLogin,senhaLogin){
-
-
-    nomeLogin = prompt("Digite seu nome de login:")
-    let verificaNome = arrayNomes.filter(function(nome){
-
-        return nome === nomeLogin
-    });
+        this.nome = nome;
+        this.idade = idade;
+        this.nota = nota;
+    }
     
-        if(verificaNome.length > 0){
 
-            senhaLogin = prompt("Digite sua senha de login:")
-            let verificaSenha = arraySenhas.filter(function(senha){
-
-                return senha === senhaLogin
-            });
-                if(verificaSenha.length > 0){
-
-                    console.log("Login efetuado com sucesso!");
-                }
-                else{
-
-                    console.log("Senha errada")
-                }
-
-        }else{
-
-            console.log("Nenhum nome com o " + nomeLogin + " encontrado")
-        }
-
-        Desejo();
 
 }
 
-    function Exclusao(nome, senha){
+let newAluno = [];
+let arrayNotas = [];
+let arrayIdade = [];
+let arrayNome = [];
 
-        nome = prompt("Digite o nome da conta, para exclusão: ")
-        let verifica2 = arrayNomes.indexOf(nome)
+let somaNotas = 0;
 
-            if(verifica2 !== -1){
+function NovoAluno (nomeAluno, idadeAluno, notaAluno){
 
-                senha = prompt("Digite a senha da conta a excluir:")
-                
-                
-                if(arraySenhas[verifica2] === senha){
+    nomeAluno = prompt("Qual o nome do aluno?")
+        arrayNome.push(nomeAluno);
+    idadeAluno = prompt("Qual a idade do aluno?")
+        arrayIdade.push(idadeAluno);
+    notaAluno = parseInt(prompt("Qual a nota do aluno?"))
+        arrayNotas.push(notaAluno);
 
-                    arrayNomes.splice(verifica2, 1)
-                    arraySenhas.splice(verifica2, 1)
+    newAluno.push(new Alunos(nomeAluno, idadeAluno, notaAluno))
 
-                    console.log(arrayNomes)
-                    console.log(arraySenhas)
-                }
-            }
+    let desejo = Number(prompt("Deseja cadastrar mais algum aluno? 1 para sim e 2 para nao"))
 
-            Desejo();
-                }
+    if(desejo === 1 ){
 
-                
+        NovoAluno();
+    }
+    else{
+        console.log("Foram cadastrados " + newAluno.length + " aluno(s)");
+        console.log("A média dos alunos foram de: " + CalculoMédias());
+
+        console.log("Separação por idades:")
+            OrdenarPorIdade()
+        console.log("Separação por nomes:")
+            OrdenarPorNome();
+        console.log("Separação por notas:")
+            OrdenarPorNota();
+        console.log("Relatório geral dos alunos:")
+        return console.log(newAluno )
+    }
+
+}
+
+let medias = 0;
+
+function CalculoMédias(medias){
+
+   somaNotas = arrayNotas.reduce((soma, num) => soma + num, 0)
+
+    return medias = somaNotas / arrayNotas.length
+}
+
+
+
+function OrdenarPorNota () {
+
+    return console.log( arrayNotas)
+
+
+}
+
+function OrdenarPorNome () {
+
+    return console.log( arrayNome)
+
+
+}
+
+function OrdenarPorIdade () {
+
+    
+    return console.log( arrayIdade)
+
+
+}
+
+NovoAluno();
