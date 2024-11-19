@@ -1,89 +1,135 @@
 
-body{
-
-    padding: 0 0;
-    margin: 0 0 ;
-}
 .Cabeçalho{
 
-    height: 20vh;
-    width: 100%;
-    background-color:darkgoldenrod ;
+    height: 14vh;
+    width:100%;
+    background-color: darkgoldenrod;
     text-align: center;
 
 }
 
-.Título{
+.barraPesquisa{
 
-    padding-top: 7vh;
-    height: auto;
-    width: auto;
+    height: 7vh;
     text-align: center;
+    
+    
+    
+    
+
 }
 
-h1{
+#pesquisar{
 
-    margin-block-start: 0px;
-    margin-block-end: 0px;
+    margin-top: 2vh;
+    margin-right: 2vw;
 }
 
-h2{
-    margin-block-start: 2vh;
-    margin-block-end: 2vh;
-}
+.barraOffers{
 
-.Conteudo{
-
-    width: 100%;
-    height: 70vh;
+    height: 7vh;
     text-align: center;
+    line-height: 6vh;
+    border: solid black 0.5px
+}
+
+p{
+    display: inline-flex;
+    vertical-align: middle;
     
 }
 
-.Primeira{
+.offer{
 
-    margin-top:5vh
+ 
+    margin-right: 4vw;
+}
+
+
+.content{
+
+    height: 86vh;
+    width: 100%;
+    background-color:darkgrey;
+    text-align: center;
+    padding: 1px;
 
 }
 
-.segunda{
 
-    margin-top: 1.5vh;
-}
+.boxConteudo{
 
-.terceira{
-
-    margin-top: 1.5vh;
-}
-
-.quarta{
-
-    margin-top: 1.5vh;
-}
-
-.quinta{
-
-    margin-top: 1.5vh;
-}
-
-.sexta{
-
-    margin-top: 2vh;
-}
-
-.forms{
-text-align: center;
-}
-.Formulario{
-
-    margin-top: 10vh;
-    margin-left: 24vw;
-    height: 55vh;
-    width:50%;
+    height: 20vh;
+    width: 60%;
     border: solid black;
+    display: inline-flex;
+    margin-top: 7vh
+
+
+
+
 }
 
-#enviar{
+h3{
+    margin: 0px 0px;
 
-    margin-top: 2.5vh;
+}
+.cont1{
+
+    height: 19.5vh;
+    width: 15vw;
+   
+    
+
+    margin-right: 2vw;
+    border-right: solid black 1px;
+
+}
+
+.cont2{
+
+    height: 20vh;
+    
+ 
+    margin-right: 2vw;
+
+    width: 15vw;
+   
+
+
+}
+
+.cont3{
+
+    height: 7vh;
+    width: 15vw;
+
+    margin-right: 2vw;
+
+}
+
+.cont4{
+
+    height: 7vh;
+    width: 15vw;
+  
+    margin-right: 2vw;
+
+    
+
+}
+
+.subtituloBox{
+
+    display:block;
+    margin-top: 1vh;
+    float: left;
+
+}
+
+#boxinha{
+
+    white-space: nowrap;
+    float: left;
+    margin-top: 3vh;
 }
