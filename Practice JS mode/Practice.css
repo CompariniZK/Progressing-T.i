@@ -59,15 +59,8 @@ p{
 .boxConteudo{
 
     height: 16vh;
-    width: 60%;
     border-radius: 10px;
-    display: inline-flex;
-    margin-top: 7vh;
     background-color: white
-
-
-
-
 }
 
 h3{
@@ -135,4 +128,38 @@ h3{
     float: left;
     margin-top: 3vh;
     margin-left: 0.5vh;
+}
+
+.market{
+
+    
+    width: 60%;
+    display: inline-flex;
+    margin-top: 7vh;
+
+}
+
+.Products{
+
+    
+    height: 30vh;
+}
+
+.Imagens{
+
+   height: 190.9px;
+   width: 300px;
+
+   
+
+}
+
+.produtos{
+
+
+display: inline-block;
+height: 190.9px;
+width: 300px;
+margin-right: 2.5vw;
+margin-left: 2.5vw;
 }
