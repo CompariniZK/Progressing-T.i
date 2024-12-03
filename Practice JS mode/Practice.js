@@ -1,90 +1,162 @@
-class Alunos{
+class Hotel{
 
-    nome 
-    idade
-    nota
 
-    constructor(nome, idade, nota){
+id
+nome
+categoria
+endereço
+telefone
 
-        this.nome = nome;
-        this.idade = idade;
-        this.nota = nota;
-    }
+constructor(id, nome, categoria, endereço, telefone){
+
+    this.id = id
+    this.nome = nome
+    this.categoria = categoria
+    this.endereço = endereço
+    this.telefone = telefone
     
 
 
 }
 
-let newAluno = [];
-let arrayNotas = [];
-let arrayIdade = [];
-let arrayNome = [];
 
-let somaNotas = 0;
 
-function NovoAluno (nomeAluno, idadeAluno, notaAluno){
 
-    nomeAluno = prompt("Qual o nome do aluno?")
-        arrayNome.push(nomeAluno);
-    idadeAluno = prompt("Qual a idade do aluno?")
-        arrayIdade.push(idadeAluno);
-    notaAluno = parseInt(prompt("Qual a nota do aluno?"))
-        arrayNotas.push(notaAluno);
+}
 
-    newAluno.push(new Alunos(nomeAluno, idadeAluno, notaAluno))
+let arrayHotel = [];
 
-    let desejo = Number(prompt("Deseja cadastrar mais algum aluno? 1 para sim e 2 para nao"))
 
-    if(desejo === 1 ){
+class Reserva {
 
-        NovoAluno();
-    }
-    else{
-        console.log("Foram cadastrados " + newAluno.length + " aluno(s)");
-        console.log("A média dos alunos foram de: " + CalculoMédias());
+    idReserva
+    idHotel
+    nomeResponsavel
+    diaEntrada
+    diaSaida
 
-        console.log("Separação por idades:")
-            OrdenarPorIdade()
-        console.log("Separação por nomes:")
-            OrdenarPorNome();
-        console.log("Separação por notas:")
-            OrdenarPorNota();
-        console.log("Relatório geral dos alunos:")
-        return console.log(newAluno )
+    constructor(idReserva,idHotel,nomeResponsavel,diaEntrada,diaSaida){
+
+    this.idReserva = idReserva
+    this.idHotel = idHotel
+    this.nomeResponsavel = nomeResponsavel
+    this.diaEntrada = diaEntrada
+    this.diaSaida = diaSaida
+
     }
 
-}
 
-let medias = 0;
-
-function CalculoMédias(medias){
-
-   somaNotas = arrayNotas.reduce((soma, num) => soma + num, 0)
-
-    return medias = somaNotas / arrayNotas.length
-}
-
-
-
-function OrdenarPorNota () {
-
-    return console.log( arrayNotas)
 
 
 }
 
-function OrdenarPorNome () {
+let Hoteis = [];
 
-    return console.log( arrayNome)
+function CadastroHoteis (){
 
+     let hotelNome = prompt("Digite o nome do hotel: ");
+     let hotelId = Number(prompt("Digite o número de id do hotel: "));
+     let hotelEndereco = prompt("Digite o endereço do hotel: ")
+     let hotelCategoria = prompt("Digite a categoria do hotel: ");
+     hotelTelefone = Number(prompt("Digite o telefone do hotel"));
+
+     let NovoHoteis = new Hotel(hotelId, hotelNome, hotelCategoria, hotelEndereco , hotelTelefone)
+     Hoteis.push(NovoHoteis)
+    desejoCliente();
+}
+
+
+let reservas = [];
+
+function CadastroReservas(){
+
+    let idReserva = Number(prompt("Digite o id da reserva: "));
+    let idHotel = Number(prompt("Digite o número de id do hotel: "));
+    let nomeResponsavel = prompt("Digite o nome do reponsável da reserva: ")
+    let diaEntrada = prompt("Digite a data da entrada do hotel ");
+    let diaSaida = prompt("Digite a data da saida do hotel");
+
+    let newReserva = new Reserva(idReserva, idHotel, nomeResponsavel, diaEntrada, diaSaida);
+
+    reservas.push(newReserva)
+
+    desejoCliente();
 
 }
 
-function OrdenarPorIdade () {
 
+
+function verHotel (iDhotel){
+
+    iDhotel = Number(prompt("Digite o id do hotel para verificar as reservas contidas nele: "))
+    let indiceNomeHotel = Hoteis.find(hotel => hotel.id === iDhotel);
     
-    return console.log( arrayIdade)
+    let reservasPlusId = reservas.filter(reserva => reserva.idHotel === iDhotel)
+
+    reservasPlusId.forEach((reserva, index) => {
+
+    console.log("Reserva" + (index + 1))
+    console.log(indiceNomeHotel.nome);
+    console.log(reserva.nomeResponsavel);
+    console.log(reserva.diaEntrada);
+    console.log(reserva.diaSaida);
+
+
+    })
+   
+    desejoCliente()
+
 
 
 }
 
+function verReservas(iDReserva){
+
+    iDReserva = Number(prompt("Digite o número ID da reserva: "))
+    let EncontrarReserva = reservas.find(reserva => reserva.idReserva === iDReserva)
+    let idhotel = EncontrarReserva.idHotel;
+    let EncontrarHotel = Hoteis.find(hotel => hotel.id === idhotel)
+
+    let nomeHotel = EncontrarHotel.nome;
+
+    console.log("Id Reserva: " + iDReserva)
+    console.log("Nome do hotel: " + nomeHotel)
+    console.log("Dia de entrada: " + EncontrarReserva.diaEntrada)
+    console.log("Dia de saída: " + EncontrarReserva.diaEntrada)
+
+}
+    
+function desejoCliente(){
+
+let desejoCliente = Number(prompt("O que deseja fazer? 1 para Cadastrar hotel; 2 para cadastro de reservas, 3 para mostrar os cadastros de hotel e 4 para verificar as reservas e 5 para break"));
+
+if(desejoCliente === 1){
+
+    CadastroHoteis();
+   
+}
+
+if(desejoCliente === 2){
+
+  CadastroReservas();
+
+}
+
+if(desejoCliente === 3){
+
+    verHotel();
+}
+
+if(desejoCliente === 4){
+
+    verReservas();
+}
+
+if(desejoCliente === 5){
+
+console.log("Parabéns, corno")
+
+}
+    }
+
+desejoCliente();
