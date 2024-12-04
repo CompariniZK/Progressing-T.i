@@ -32,6 +32,13 @@
     border: solid black 0.5px
 }
 
+.offer:hover{
+
+    transition-duration: 0.6s;
+    background-color: darkorange;
+
+}
+
 p{
     display: inline-flex;
     vertical-align: middle;
@@ -147,19 +154,34 @@ h3{
 
 .Imagens{
 
-   height: 190.9px;
-   width: 300px;
+   height: 180.9px;
+   width: 150px;
+   margin-top: 10px;
+   margin-bottom: 5px;
+   
 
    
 
 }
 
+
+
+
 .produtos{
 
 
 display: inline-block;
-height: 190.9px;
+height: 200px;
 width: 300px;
 margin-right: 2.5vw;
 margin-left: 2.5vw;
+overflow: hidden;
+background-color: white;
+
+}
+
+.produtos:hover{
+
+transition-duration: 0.9s;
+padding-bottom: 30%;
 }

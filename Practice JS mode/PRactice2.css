@@ -1,0 +1,52 @@
+.Cabeçalho{
+
+    height: 14vh;
+    width:100%;
+    background-color: yellow;
+    text-align: center;
+
+}
+
+.barraPesquisa{
+
+    height: 7vh;
+    text-align: center;
+    
+    
+    
+    
+
+}
+
+#pesquisar{
+
+    margin-top: 2vh;
+    margin-right: 2vw;
+}
+
+.barraOffers{
+
+    height: 7vh;
+    text-align: center;
+    line-height: 6vh;
+    border: solid black 0.5px
+}
+
+.offer:hover{
+
+    transition-duration: 0.6s;
+    background-color: darkorange;
+
+}
+
+p{
+    display: inline-flex;
+    vertical-align: middle;
+    
+}
+
+.offer{
+
+ 
+    margin-right: 4vw;
+}
