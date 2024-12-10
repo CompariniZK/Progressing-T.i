@@ -1,174 +1,156 @@
-let livros = [];
+class ToDo{
 
-let library = [];
-
-class Livro{
-
-    nome
-    autor
-    editora
-    ano
-
-    constructor(nome, autor, editora, ano){
+    Texto
+    Prioridade
+    Feito
 
 
-        this.nome = nome
-        this.autor = autor
-        this.editora = editora
-        this.ano = ano
+    constructor(Texto, Prioridade, Feito){
+
+        this.Texto = Texto;
+        this.Prioridade = Prioridade;
+        this.Feito = Feito;
+
+
 
     }
+
+   
+
+
+}
+
+let objetos = [];
+
+function CriarToDo(){
+
+    let texto = prompt("Digite seu afazer principal da semana")
+    let prioridade = Number(prompt("Digite quantas estrelas de prioridade é essa tarefa: "))
+    let feito = false;
+
+    let Objetos = new ToDo(texto, prioridade, feito);
+
+    let discover = objetos.find(objeto => objeto.Texto === texto && objeto.Prioridade === prioridade)
+
+if (discover == undefined){
+
+    return objetos.push(Objetos)
+
+}
+     
+
 
 
 }
 
 
-class Biblioteca{
+function AtualizarToDo();
+
+let textoAntigo = prompt("Digite seu afazer anterior que já fora realizado:")
 
 
-    Nome 
-    Endereco
-    Telefone
-    Acervo
+let discover = objetos.findIndex(objeto => objeto.Texto === textoAntigo)
 
-    constructor(Nome,Endereco,Telefone,Acervo){
+if(discover !== -1){
 
-        this.Nome = Nome
-        this.Endereco = Endereco
-        this.Telefone = Telefone
-        this.Acervo = Acervo
+    let textoNovo = prompt("Digite seu afazer atual:")
 
-    }
+    objetos[discover].Texto = textoNovo
 
-        findBook() {
-            
-            let nomeDoLivro = prompt("Digite o nome do livro que deseja buscar na biblioteca: ")
-            let nomeLivro =  livros.find(livro => livro.nome === nomeDoLivro)
+    return true;
 
-            if(nomeLivro !==  undefined){
+}
 
-            console.log("Livro encontrado, veja as info: ")
-            console.log(nomeLivro)
-            let emprestimo = parseInt(prompt("Deseja pedir emprestado algum livro? Digite 1 e carregarei você até a ala de empréstimo: "))
-                if(emprestimo === 1){
+else{
 
-                    this.borrowBook();
+    return false;
 
-                }
-                else{
+}
 
-                    console.log("Ok")
-                    Desejo();
-                }
-            }
-        }
+function ConcluirToDo(){
 
-        borrowBook() {
+    let inverter = prompt("Digite o afazer dentro da lista para inverter o true ou false:")
 
-            let nomeLivro = prompt("Digite o nome do livro para verificar a disponibilidade:")
-            let verificaDispo = livros.findIndex(livro => livro.nome === nomeLivro)
+    let discover = objetos.findIndex(objeto => objeto.Texto === inverter)
 
-            if(verificaDispo !== -1){
+        if(discover !== -1){
 
+            objetos[discover].Feito = true;
 
-                console.log("Empréstimo feito")
-                livros.splice(verificaDispo,1)
-                Desejo();
-
-
-
-            }
-
-            else{
-
-                console.log("Livro não disponível")
-                Desejo();
-            }
+            return true;
 
 
         }
+        else{
+
+            return false;
+        }
 
 }
 
 
-function biblioteca(){
+function ExcluirToDo(){
 
+    let excluir = prompt("Digite o nome do objeto afazer para excluir da lista: ")
+    let discover = objetos.findIndex(objeto => objeto.Texto === excluir)
 
-    let Nome = prompt("Digite o nome da bibliteca: ")
-    let Endereco = prompt("Digite o endereco da biblioteca:")
-    let Telefone = Number(prompt("Digite o número da biblioteca:"))
-    let AcervoDeLivros = livros;
-    let Library = new Biblioteca(Nome, Endereco, Telefone, AcervoDeLivros)
+    if(discover !== -1){
 
-    library.push(Library)
-    Desejo();
+        objetos.splice(discover, 1)
 
+            return true;
+    }
+    else{
 
-}
-
-
-
-
-
-function Livrinho (){
-
-    let nome = prompt("Digite o nome do livro:")
-    let autor = prompt("Digite o nome do autor: ")
-    let editora = prompt("Digite o nome da editora: ")
-    let ano = Number(prompt("Digite o ano do lançamento do livro: "))
-
-    let objetoLivro = new Livro(nome, autor, editora, ano)
-
-
-    livros.push(objetoLivro)
-    Desejo();
-
-
-}
-
-
- 
-
-function Desejo(){
- let desejo = Number(prompt("Deseja continuar? Se sim deseja cadastrar um livro digite 1, se deseja cadastrar uma biblioteca(2),se deseja buscar informações e disponibilidade de um livro 3, se quiser quitar, 4."))
-
-
- if(desejo === 1){
-
-    Livrinho();
-
- }
-
- if(desejo === 2){
-
-    biblioteca();
+        return false;
 
     }
+
+
+} 
+
+
+function PesquisarToDo (){
+
+    let findToDo = prompt("Pesquise o nome do objeto afazer para verificar seus dados no array: ")
+    let discover = objetos.find(objeto => objeto.Texto === findToDo)
     
 
- 
+    if(discover !== undefined){
 
- 
- if(desejo === 3){
+        console.log("Afazer encontrado");
+        console.log(discover);
 
-    if(library.length > 0 ){
+        return true
 
-        let bibliotecaSelecionada = library[0];
-        bibliotecaSelecionada.findBook();
 
+
+    }else{
+
+        return false;
     }
-    
- }
-
-if(desejo === 4){
 
 
-
-    console.log("Ótima semana pra ti meu truta")
-}
- 
-
- 
 }
 
 
+function OrdenarToDosCrescente(){
+
+    objetos.sort((a,b) => a.Prioridade - b.Prioridade)
+    console.log("Array ordenado de forma crescente: ")
+    console.log(objetos)
+
+      return objetos
+
+}
+
+
+function OrdenarToDosDecrescente(){
+
+    objetos.sort((a,b) => b.Prioridade - a.Prioridade)
+    console.log("Array ordenado de forma decrescente: ")
+    console.log(objetos)
+
+      return objetos
+
+}
