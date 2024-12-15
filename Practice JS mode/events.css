@@ -1,4 +1,4 @@
-.cabeçalho{
+.Cabeçalho{
 
 height: 14vh;
 width: 100%;
@@ -11,5 +11,6 @@ background-color: darkslategray;
 .cabe{
 
     display: inline-block;
-    
+    margin-top: 7vh
+
 }
