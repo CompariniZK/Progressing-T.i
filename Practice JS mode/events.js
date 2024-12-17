@@ -21,9 +21,13 @@ input2.addEventListener('focus', border)
 
 function forminho (event){
 
-   console.log("Recebemos o cadastro")
-   console.log(event)
-   event.preventDefault()
+   console.log("Recebemos o cadastro");
+   console.log(event);
+   console.log("Preparando envio...")
+   forms.action = "api.dodev.com.br/submeterDados";
+   
+
+
 
 
 
