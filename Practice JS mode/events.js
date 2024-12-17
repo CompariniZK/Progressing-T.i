@@ -7,24 +7,48 @@ event.target.style.outlineColor= "green"
 
 }
 
+function saveNomeLoja (texto){
+
+window.localStorage.setItem('NomeLoja', texto)
+
+}
+
+function saveEnderecoLoja (texto){
+
+   window.localStorage.setItem('endereço', texto)
+   
+   }
+   
+
 
 let input1 = document.getElementById('nome')
 input1.addEventListener('focus', border)
 
 
+input1.addEventListener('blur', (event) => {
+
+      console.log("Salvo")
+      saveNomeLoja(event.target.value)
+} )
+
 let input2 = document.getElementById('endereco')
 
 input2.addEventListener('focus', border)
+input2.addEventListener('blur', (event) =>{
+
+   console.log("Salvo tbm")
+   saveEnderecoLoja(event.target.value)
+
+
+} )
 
 ///////////////////////////////////////////////
 
 
 function forminho (event){
 
-   console.log("Recebemos o cadastro");
-   console.log(event);
-   console.log("Preparando envio...")
-   forms.action = "api.dodev.com.br/submeterDados";
+   localStorage.setItem
+   event.preventDefault();
    
 
 
