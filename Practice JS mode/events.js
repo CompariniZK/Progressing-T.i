@@ -41,7 +41,7 @@ input2.addEventListener('blur', (event) =>{
    saveEnderecoLoja(event.target.value)
 
 
-} )
+} ) oui
 
 ///////////////////////////////////////////////
 
