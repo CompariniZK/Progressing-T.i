@@ -29,6 +29,7 @@ input1.addEventListener('blur', (event) => {
 
       console.log("Salvo")
       saveNomeLoja(event.target.value)
+      console
 } )
 
 let input2 = document.getElementById('endereco')
