@@ -49,7 +49,7 @@ function forminho (event){
 
    localStorage.setItem
    event.preventDefault();
-   
+   console
 
 
 
