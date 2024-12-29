@@ -1,0 +1,103 @@
+.Cabeçalho{
+
+    height: 20vh;
+    width: 100%;
+    border-bottom: solid black;
+    text-align: center;
+    
+    
+
+}
+
+.çalho{
+
+    display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10vh;
+            width: 100%;
+            text-align: center;
+}
+
+#buscar{
+
+    margin-top: 3vh;
+
+}
+
+#logo{
+
+    height: 10vh;
+
+}
+
+
+.image{
+
+display: inline-block;
+margin-top: 3vh;
+margin-right: 2vw;
+
+
+}
+
+.options{
+
+    display: inline-block;
+    margin-top: 5vh;
+    padding: 1vh 1vw;
+    margin-bottom: 2vh;
+    
+
+
+}
+
+#opcao{
+
+    font-size: 3vh;
+    text-decoration: none;
+    color: black;
+
+}
+
+.options:hover{
+
+    transition-duration: 0.5s;
+    background-color:cadetblue;
+    
+
+
+
+}
+
+.Cabe1{
+
+background-color: black;
+height: 10vh;
+justify-content: center;
+align-items: center;
+width: 100%;
+
+
+}
+
+h3{
+
+margin: 0px;
+
+}
+
+
+.Home{
+
+    margin-left: 3vw;
+
+
+}
+
+.Carrying{
+
+    margin-right: 3vw;
+
+
+}
