@@ -27,7 +27,8 @@
 
 #logo{
 
-    height: 10vh;
+    height: 9vh;
+    
 
 }
 
@@ -35,7 +36,7 @@
 .image{
 
 display: inline-block;
-margin-top: 3vh;
+
 margin-right: 2vw;
 
 
@@ -101,3 +102,98 @@ margin: 0px;
 
 
 }
+
+.content{
+
+
+height: 140vh;
+width: 100%;
+background-color: black;
+text-align: center;
+padding: 1px;
+
+}
+
+
+.product{
+
+
+    height: 120vh;
+    width: 80%;
+    margin-top: 20vh;
+
+
+}
+
+.img{
+
+
+    height: 50vh;
+    width: 30vw;
+    float: left;
+    margin-left: 10vw;
+
+}
+
+.title{
+
+    height: 5vh;
+    margin-right: 6vw;
+
+}
+#Ramon{
+
+
+    color: white;
+    font-size: xx-large;
+
+
+}
+
+.details{
+
+
+    height: 20vh;
+   
+    margin-top: 3vh;
+
+
+}
+
+#price{
+
+    color: whitesmoke;
+    font-size: larger;
+    margin-right: 27vw;
+
+
+}
+
+.detalhess{
+
+    color: darkgray;
+    margin-top: 5vh;
+    text-align: left;
+    margin-left: 44vw;
+   
+    
+    
+
+
+
+
+}
+
+.button{
+
+    height: 5vh;
+    text-align: center;
+    display: block;
+    margin-left: 21vw;
+
+    margin-top: 15vh;
+
+
+}
+
+
