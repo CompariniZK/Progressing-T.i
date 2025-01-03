@@ -106,7 +106,7 @@ margin: 0px;
 .content{
 
 
-height: 140vh;
+height: 165vh;
 width: 100%;
 background-color: black;
 text-align: center;
@@ -184,6 +184,44 @@ padding: 1px;
 
 }
 
+
+#buy{
+
+    background: linear-gradient(90deg, #4e9af1, #5479e8);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+
+
+
+}
+
+#carrinho{
+
+
+    background: linear-gradient(90deg, #4e9af1, #5479e8);
+    border: none;
+    border-radius: 30px;
+    padding: 12px 24px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+
+
+
+}
+
 .button{
 
     height: 5vh;
@@ -196,4 +234,46 @@ padding: 1px;
 
 }
 
+.endPage{
 
+    
+    height: 25vh;
+    background-color: slategrey;
+    width: 100%;
+    text-align: left;
+
+
+}
+
+.contact{
+
+    font-size: larger;
+    margin-left: 5vh;
+
+
+}
+
+.adresses{
+
+    height: 15vh;
+    margin-top: 4vh;
+    margin-left: 5vh;
+}
+
+
+
+
+#insta{
+
+color:white;
+font-size: larger;
+
+}
+
+
+label{
+
+color: white;
+font-size: larger;
+
+}
