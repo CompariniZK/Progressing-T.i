@@ -27,7 +27,7 @@
 
 #logo{
 
-    height: 10vh;
+    height: 9vh;
 
 }
 
@@ -35,7 +35,7 @@
 .image{
 
 display: inline-block;
-margin-top: 3vh;
+
 margin-right: 2vw;
 
 
@@ -101,3 +101,101 @@ margin: 0px;
 
 
 }
+
+
+.content{
+
+
+height: 110vh;
+width: 100%;
+background-color: black;
+text-align: center;
+}
+
+.title{
+
+display: inline-block;
+height: 10vh;
+margin-top: 7vh;
+margin-right: 4vw;
+width: 60%;
+
+}
+
+#titulo{
+
+
+    color: white;
+    font-size: xx-large;
+    
+
+}
+
+.sobre{
+
+    height: 50vh;
+    width: 60%;
+    border: solid  white;
+    margin-top: 5vh;
+    display: inline-block;
+
+}
+
+
+.text{
+
+    margin-top: 20vh;
+
+
+
+}
+p{
+   
+    color: white;
+}
+
+
+.endPage{
+
+    margin-top: 32vh;
+    height: 24vh;
+    background-color: slategrey;
+    width: 100%;
+    text-align: left;
+
+
+}
+
+.contact{
+
+    font-size: larger;
+    margin-left: 5vh;
+
+
+}
+
+.adresses{
+
+    height: 15vh;
+    margin-top: 4vh;
+    margin-left: 5vh;
+}
+
+
+
+
+#insta{
+
+color:white;
+font-size: larger;
+
+}
+
+
+label{
+
+color: white;
+font-size: larger;
+
+}
+
