@@ -233,11 +233,10 @@ padding: 1px;
 
 
 }
-
 .endPage{
 
-    
-    height: 25vh;
+    margin-top: 12vh;
+    height: 35vh;
     background-color: slategrey;
     width: 100%;
     text-align: left;
@@ -246,21 +245,25 @@ padding: 1px;
 }
 
 .contact{
-
+   
     font-size: larger;
-    margin-left: 5vh;
+    margin-left: 50%;
+    width: 10%;
+    
+    
 
 
 }
+
 
 .adresses{
 
-    height: 15vh;
-    margin-top: 4vh;
-    margin-left: 5vh;
+    height: 10vh;
+   margin-top: 9vh;
+    margin-left: 18vw;
+    margin-right: 10vw;
+    display: inline-block;
 }
-
-
 
 
 #insta{
@@ -275,5 +278,58 @@ label{
 
 color: white;
 font-size: larger;
+
+}
+
+.cadastro{
+
+    
+    height: 25vh;
+   width: 10vw;
+    margin-bottom: 5vh;
+    margin-right: 20vw;
+    float: right;
+    
+    
+
+}
+
+#confirmP{
+
+    height: 3vh;
+
+
+}
+
+#Email{
+
+    height: 3vh;
+    
+
+}
+
+#senha{
+
+    height: 3vh;
+    
+
+}
+
+.inputs{
+
+    margin-bottom: 2vh ;
+    display: inline-block;
+}
+
+.btn{
+
+    display: inline-block;
+
+
+}
+
+.confirm{
+
+display: inline-block;
 
 }
