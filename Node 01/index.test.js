@@ -20,7 +20,7 @@ test("calculo de razao entre combustivel e distância de acordo com o tipo", () 
     const resultado = calculoRota(distancia, combustivel);
 
     expect(resultado).toBeCloseTo(14.545)
-
+//
 
 
 })
