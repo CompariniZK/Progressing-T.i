@@ -112,6 +112,29 @@ margin: 0px;
 
 }
 
+.ofertaTitulo{
+
+    height: 15vh;
+    width: 100%;
+    text-align: center;
+
+}
+
+#titulo1{
+
+color: white;
+
+}
+
+#titulo2{
+
+color: white;
+
+}
+
+
+
+
 .evidence{
 
 
@@ -255,7 +278,6 @@ label{
 
 color: white;
 font-size: larger;
-
 }
 
 .cadastro{

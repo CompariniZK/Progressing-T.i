@@ -15,4 +15,4 @@ if(combustivel == "G"){
         return resultado;
 }
 
-module.exports = calculoRota;
+module.exports = calculoRota;//
