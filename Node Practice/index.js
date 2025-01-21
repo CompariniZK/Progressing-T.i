@@ -5,14 +5,14 @@ const app = express();
 app.use(express.json()) 
 
 
-app.get('/players', (resq, resp) => {
+app.get('/players', (req, resp) => {
 
-    console.log("Get no server")
-
+    console.log("Get no server");
+    resp.status(200).send('deu certo');
 } )
 
 
-app.listen(3002, () => {
+app.listen(3004, () => {
 
 console.log('inicio servidor da api')
 
