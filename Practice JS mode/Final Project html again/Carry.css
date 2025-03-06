@@ -27,7 +27,7 @@
 
 #logo{
 
-    height: 10vh;
+    height: 9vh;
 
 }
 
@@ -35,8 +35,7 @@
 .image{
 
 display: inline-block;
-margin-top: 3vh;
-margin-right: 2vw;
+
 
 
 }
@@ -101,5 +100,28 @@ margin: 0px;
 
 
 }
+.conteudo{
+
+text-align: center;
+
+
+}
+.Carryz{
+
+    height: 60vh;
+    width: 40vw;
+    margin-top: 10vh;
+    border: solid brown;
+    display: inline-block;
+
+
+}
+.carri{
+
+    margin-top: 5vh;
+
+}
+
+
 
 
