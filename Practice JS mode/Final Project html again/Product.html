@@ -108,7 +108,7 @@
 
                 <div class="button">
 
-                    <button id="buy">Comprar</button>
+                    <a href="file:///C:/Users/compa/Progressing%20T.I/Progressin-T.i/Practice%20JS%20mode/Final%20Project%20html%20again/Carrying.html" id="buy">Comprar</a>
                     <button id="carrinho">Adicionar ao carrinho</button>
 
                 </div>
@@ -120,7 +120,7 @@
 
             function adicionarCarrinho(nome, preco){
 
-                let carrinho = JSON.parse(localStorage.getItem('carrinho')) 
+                let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
                 
                 carrinho.push({nome: nome, preco: preco});
 
@@ -129,10 +129,10 @@
                 alert('Item adicionado ao carrinho')
             }
 
-                document.getElementById(buy).addEventListener('click', function(){
+                document.getElementById('carrinho').addEventListener('click', function(){
 
                     nomeProduto = document.getElementById('Ramon').innerText;
-                    precoProduto = parseFloat(document.getElementById('price'.innerText.replace('$', '')))
+                    precoProduto = parseFloat(document.getElementById('price').innerText.replace('$', ''))
 
                     adicionarCarrinho(nomeProduto, precoProduto)
 

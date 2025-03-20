@@ -79,21 +79,73 @@
             </div>
         </div>
     </section>
-        <section class="conteudo">
+    <section class="conteudo">
+        <section class="Carryz">
+            <div class="carri">
+                <h2 id="carrinhoTitle">Carrinho</h2>
+                <br>
+           
+            </div>
 
-            <section class="Carryz">
+            <!-- Container onde os itens do carrinho serão exibidos -->
+            <div id="itens-carrinho"></div>
 
-                <div class="carri">
-                    <h2 id="carrinho">Carrinho</h2>
-                </div>
+            <script>
+                // Recupera os itens do carrinho do localStorage
+                let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
-                
+                // Seleciona o container onde os itens serão exibidos
+                const container = document.getElementById('itens-carrinho');
+
+                // Verifica se há itens no carrinho
+                if (carrinho.length > 0) {
+                    let total = 0;
+
+                    // Itera sobre os itens do carrinho e os exibe
+                    carrinho.forEach(item => {
+                        const itemDiv = document.createElement('div');
+                        itemDiv.classList.add('item');
+
+                        itemDiv.innerHTML = `
+                            <p> 1 ${item.nome}</p>
+                    
+                            <p> $${item.preco.toFixed(2)}</p>
+                        `;
+
+                        container.appendChild(itemDiv);
+
+                        // Soma o preço ao total
+                        total += item.preco;
+                    });
+
+                    // Exibe o total
+                    const totalDiv = document.createElement('div');
+                    totalDiv.classList.add('total');
+                    totalDiv.innerHTML = `<p> <br>
+                        Total: $${total.toFixed(2)}</p>`;
+                    container.appendChild(totalDiv);
+                } else {
+                    // Se o carrinho estiver vazio, exibe uma mensagem
+                    container.innerHTML = "<p>Seu carrinho está vazio.</p>";
+                }
+            </script>
+
+                <button id = "btn">Esvaziar</button>
+
+                <script>
+
+                    const buttonZ = document.getElementById('btn')
+
+                    buttonZ.addEventListener('click', function () {
+
+                    localStorage.clear()
+                    location.reload();
+
+                    })
 
 
-            </section>
-
-
-
+                </script>
         </section>
+    </section>
 </body>
 </html>
